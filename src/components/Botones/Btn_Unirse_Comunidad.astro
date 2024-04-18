@@ -1,0 +1,17 @@
+---
+interface Props {
+  src_btn_unirse_comunidad: string;
+  titulo_btn_unirse_comunidad: string;
+}
+
+const { src_btn_unirse_comunidad, titulo_btn_unirse_comunidad } = Astro.props;
+---
+
+<a
+  title={titulo_btn_unirse_comunidad}
+  href={src_btn_unirse_comunidad}
+  target="_blank"
+  rel="noopener noreferrer"
+  class="px-5 py-3 mt-0 font-medium text-white transition-colors duration-500 delay-500 transform bg-blue-900 border-b-4 rounded-md hover:bg-blue-800 sm:w-auto lg:mt-4 border-blue-950 hover:border-0 sm:text-center"
+  >{titulo_btn_unirse_comunidad}</a
+>

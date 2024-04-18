@@ -1,0 +1,32 @@
+---
+import type { ImageMetadata } from "astro";
+import { getImage } from "astro:assets";
+
+interface Props {
+    mobileImgUrl: string | ImageMetadata;
+    desktopImgUrl: string | ImageMetadata;
+    alt: string;
+}
+
+const { mobileImgUrl, desktopImgUrl, alt } = Astro.props;
+
+const mobileImg = await getImage({
+    src: mobileImgUrl,
+    format: "webp",
+    width: 400,
+    height: 400,
+});
+
+const desktopImg = await getImage({
+    src: desktopImgUrl,
+    format: "webp",
+    width: 500,
+    height: 500,
+});
+---
+
+<picture>
+    <source media="(max-width: 799px)" srcset={mobileImg.src} />
+    <source media="(min-width: 800px)" srcset={desktopImg.src} />
+    <img loading="eager" src={desktopImg.src} alt={alt} title={alt} />
+</picture>

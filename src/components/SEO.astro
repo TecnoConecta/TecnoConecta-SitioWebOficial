@@ -1,0 +1,67 @@
+---
+interface Props {
+  titulo_pagina: string;
+  descripcion_pagina: string;
+  fecha_publicacion_pagina: string;
+}
+
+const site_url = "https://tecnoconecta.net";
+
+const { titulo_pagina, descripcion_pagina, fecha_publicacion_pagina } =
+  Astro.props;
+---
+
+<!-- Icono del Sitio Web -->
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="image_src" href="/favicon.svg"/>
+
+<!-- SITEMAP.XML -->
+<link rel="sitemap" href="/sitemap-index.xml" />
+
+<!-- CACHE -->
+<meta http-equiv="Cache-Control" content="max-age=3600">
+
+<!-- Canonical URL SEO -->
+<link rel="canonical" href={site_url} />
+
+<!-- Codificación y Adaptabilidad -->
+<meta charset="UTF-8" />
+<meta name="description" content={descripcion_pagina.substring(0, 163)} />
+<meta name="viewport" content="width=device-width" />
+
+<!-- Generador del Sitio Web -->
+<meta name="generator" content={Astro.generator} />
+
+<!-- Mejor Optimizacion del SEO -->
+<meta http-equiv="Content-Language" content="es-MX" />
+<meta name="author" content="TecnoConecta" />
+<meta name="publisher" content="TecnoConecta" />
+<meta name="theme-color" content="#FFFFFF" />
+
+<!-- Informacion Adicional para el SEO -->
+<meta name="geo.region" content="MX-JAL" />
+<meta name="geo.placename" content="Zapopan, Jalisco" />
+<meta name="address" content="Zapopan, Jalisco, México" />
+<meta name="copyright" content="2024, TecnoConecta" />
+<meta name="date" content={fecha_publicacion_pagina} />
+
+<!-- Palabras Clave y Tema del Sitio Web -->
+<meta
+  name="keywords"
+  content="tecnología, innovación tecnológica, avances tecnológicos, dispositivos tecnológicos, tendencias tecnológicas, estudiantes universitarios, formación académica, vida estudiantil, actividades estudiantiles, recursos educativos para estudiantes, emprendimiento, startups, empresarios, comunidad universitaria, participación comunitaria, trabajo en equipo, responsabilidad social, CUCEA, educación superior, campus universitario, aprendizaje, educación continua, adquisición de conocimientos, técnicas de estudio, recursos de aprendizaje, gestión de proyectos, planificación estratégica, ejecución de proyectos, evaluación de resultados, proceso de aprendizaje, métodos de enseñanza, colaboración, comunicación efectiva, eventos académicos, conferencias, seminarios, talleres, programación, desarrollo de software, lenguajes de programación, algoritmos, desarrollo web, diseño web, programación web, aplicaciones web, experiencia del usuario, aprender a programar, tutoriales de programación, cursos en línea de programación, aprendizaje desde cero, fundamentos de programación, administración de proyectos, liderazgo, control de calidad, gestión de riesgos"
+/>
+
+<!-- Redes Sociales -->
+<meta name="og:title" content={titulo_pagina} />
+<meta name="og:description" content={descripcion_pagina.substring(0, 163)} />
+<meta name="og:url" content={site_url} />
+<meta property="og:site_name" content="TecnoConecta" />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="es_MX" />
+
+<!-- Mejorar la visibilidad de su sitio en los resultados de los motores de búsqueda. -->
+<meta name="robots" content="index, follow" />
+<meta name="googlebot" content="index, follow" />
+
+<!-- Titulo de la Pagina -->
+<title>{titulo_pagina}</title>

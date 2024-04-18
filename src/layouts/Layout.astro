@@ -1,0 +1,86 @@
+---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import SEO from "../components/SEO.astro";
+import { ViewTransitions } from "astro:transitions";
+import "aos/dist/aos.css";
+
+interface Props {
+  titulo_pagina: string;
+  descripcion_pagina: string;
+  fecha_publicacion: string;
+}
+
+const { titulo_pagina, descripcion_pagina, fecha_publicacion } = Astro.props;
+---
+
+<!-- VERSION 1.0 -->
+<!doctype html>
+<html lang="es-MX" class="h-full motion-safe:scroll-smooth">
+  <head>
+    <ViewTransitions />
+    <SEO
+      titulo_pagina={titulo_pagina}
+      descripcion_pagina={descripcion_pagina}
+      fecha_publicacion_pagina={fecha_publicacion}
+    />
+  </head>
+
+  <!-- Cuerpo del Layout por defecto -->
+  <body class="bg-white">
+    <Header />
+    <!-- Fondo -->
+    <div
+      class="fixed inset-0 -z-10 h-full w-full bg-white bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:20px_20px] animate-jump-in animate-once animate-duration-[2000ms] animate-delay-[50ms] animate-ease-in-out"
+    >
+    </div>
+    <div
+      class="fixed xl:absolute bottom-auto left-auto right-0 top-0 h-[500px] w-[500px] -translate-x-[30%] translate-y-[20%] rounded-full bg-blue-200 opacity-50 blur-[80px]"
+    >
+    </div>
+    <!-- SLOT -->
+    <slot />
+    <!-- SLOT -->
+    <Footer />
+    <!-- Vuelve Pestaña del Usuario -->
+    <script src="../services/Vuelve.ts"></script>
+    <!-- AOS Animaciones -->
+    <script>
+      import { aosInit } from "../services/Aos.js";
+      aosInit();
+      document.addEventListener("astro:after-swap", aosInit);
+    </script>
+    <!-- Estilos -->
+    <style is:global>
+      html {
+        font-family:
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          Oxygen,
+          Ubuntu,
+          Cantarell,
+          "Open Sans",
+          "Helvetica Neue",
+          sans-serif;
+        overflow-x: hidden;
+        overflow-y: auto;
+        color-scheme: light;
+      }
+
+      ::selection {
+        color: white;
+        background-color: #006068;
+      }
+
+      input,
+      select,
+      textarea {
+        outline-style: none;
+        field-sizing: content;
+      }
+    </style>
+  </body><!-- Estilizacion global del Layout -->
+</html>

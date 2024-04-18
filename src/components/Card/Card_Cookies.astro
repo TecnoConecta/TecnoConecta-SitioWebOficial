@@ -1,0 +1,52 @@
+---
+// Cookie Imagen
+import Icon_Img from "../Imagenes/Icon_Img.astro";
+import Cookie from "../../../public/img/Cookie.webp";
+---
+
+<div class="fixed z-50 shadow-xl bottom-5 left-5">
+  <div
+    role="alertdialog"
+    aria-label="Cookies - TecnoConecta"
+    title="Cookies - TecnoConecta"
+    class="flex flex-col h-auto p-6 bg-white border rounded-md w-96"
+  >
+    <div class="flex flex-row items-center justify-start gap-2">
+      <div class="flex">
+        <Icon_Img
+          mobileImgUrl={Cookie}
+          desktopImgUrl={Cookie}
+          alt="Cookies - TecnoConecta"
+          arial-label="Cookies - TecnoConecta"
+        />
+      </div>
+      <div class="flex text-left">
+        <h2 class="text-2xl font-semibold text-blue-900">Usamos Cookies</h2>
+      </div>
+    </div>
+    <div class="flex mt-3 text-left">
+      <p class="text-md text-slate-500">
+        Utilizamos cookies para mejorar su experiencia de navegación, de performance y con fines
+        de marketing.
+      </p>
+    </div>
+    <div class="flex flex-row items-center justify-around gap-2 mt-3 lg:mt-0">
+      <button
+        id=""
+        title="Aceptar Cookies - TecnoConecta"
+        aria-label="Aceptar Cookies - TecnoConecta"
+        role="button"
+        class="px-5 py-3 mt-0 font-medium text-white transition-colors duration-500 delay-500 transform bg-blue-900 border-b-4 rounded-md hover:bg-blue-800 sm:w-auto lg:mt-4 border-blue-950 hover:border-0 sm:text-center"
+        >Aceptar Todo</button
+      >
+      <button
+        id=""
+        title="Rechazar Cookies - TecnoConecta"
+        aria-label="Rechazar Cookies - TecnoConecta"
+        role="button"
+        class="transform rounded-md border bg-white border-slate-200 px-5 py-3 font-medium text-black hover:bg-[#006068] hover:border-none hover:text-white lg:mt-4 mt-0 sm:w-auto border-b-4 hover:border transition-all duration-200 delay-200 sm:text-center"
+        >Rechazar Todo</button
+      >
+    </div>
+  </div>
+</div>

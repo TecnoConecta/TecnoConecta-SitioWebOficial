@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tecnoconecta.net/sitemap-index.xml

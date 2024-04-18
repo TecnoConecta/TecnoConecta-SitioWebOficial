@@ -1,0 +1,39 @@
+---
+import Carousel from "../../components/Carousel/Carousel.jsx";
+
+const items = [
+  {
+    title: "Intro del Catalogo de Servicios - TecnoConecta",
+    image: "/img/Servicios/Catalogo_Intro.webp",
+  },
+  {
+    title: "Sitios Web - Catalogo de Servicios - TecnoConecta",
+    image: "/img/Servicios/Sitios_Web.webp",
+  },
+  {
+    title: "Paginas Web - Catalogo de Servicios - TecnoConecta",
+    image: "/img/Servicios/Paginas_Web.webp",
+  },
+  {
+    title: "Blogs - Catalogo de Servicios - TecnoConecta",
+    image: "/img/Servicios/Blogs.webp",
+  },
+  {
+    title: "Tiendas Virtuales - Catalogo de Servicios - TecnoConecta",
+    image: "/img/Servicios/Tiendas_Virtuales.webp",
+  },
+];
+---
+
+<section
+  id="Servicios"
+  class="flex flex-col items-center justify-center p-4"
+>
+  <h2
+    class="mt-2 text-[3.5rem] text-center font-bold leading-[4rem] tracking-tight text-white"
+    data-aos="fade-up"
+  >
+    <span class="bg-clip-text text-[#006068]">Nuestros Servicios</span>
+  </h2>
+  <Carousel items={items} client:load/>
+</section>

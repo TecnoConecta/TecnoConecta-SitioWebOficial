@@ -1,0 +1,17 @@
+---
+interface Props {
+  src_btn_instagram: string;
+  titulo_btn_instagram: string;
+}
+
+const { src_btn_instagram, titulo_btn_instagram } = Astro.props;
+---
+
+<a
+  title={titulo_btn_instagram}
+  href={src_btn_instagram}
+  target="_blank"
+  rel="noopener noreferrer"
+  class="transform rounded-md border bg-white border-slate-200 px-5 py-3 font-medium text-black hover:bg-[#006068] hover:border-none hover:text-white lg:mt-4 mt-0 sm:w-auto border-b-4 hover:border transition-all duration-200 delay-200 sm:text-center"
+  >{titulo_btn_instagram}</a
+>

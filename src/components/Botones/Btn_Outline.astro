@@ -1,0 +1,15 @@
+---
+interface Props {
+  titulo_btn: string;
+}
+
+const { titulo_btn } = Astro.props;
+---
+
+<button
+  title={titulo_btn}
+  aria-label={titulo_btn}
+  role="button"
+  class="transform rounded-md border bg-white border-slate-200 px-5 py-3 font-medium text-black hover:bg-[#006068] hover:border-none hover:text-white lg:mt-4 mt-0 sm:w-auto border-b-4 hover:border transition-all duration-200 delay-200 sm:text-center"
+  >{titulo_btn}</button
+>

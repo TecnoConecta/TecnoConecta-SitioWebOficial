@@ -1,0 +1,66 @@
+---
+import Card_Rol from "../../components/Card/Card_Rol.astro";
+
+const Miembros = [
+  {
+    pixel_url: "/img/Miembros/Kevin.webp",
+    rol_card: "Presidente de TecnoConecta",
+    nombre_card: "Kevin Salvatorre Ramirez Galvan",
+    instagram_card: "https://www.instagram.com/salvatoregalvan?igsh=MWw3Z2Q4aGxsNWwzdA==",
+  },
+  {
+    pixel_url: "/img/Miembros/Nayeli.webp",
+    rol_card: "Vice-Presidenta de TecnoConecta",
+    nombre_card: "Nayeli Hernandez Hernandez",
+    instagram_card: "https://www.instagram.com/_hernandeznayeli?igsh=dHhjMTV6ZzY4c2Fj",
+  },
+  {
+    pixel_url: "/img/Miembros/Angel.webp",
+    rol_card: "Coordinador de Relaciones de TecnoConecta",
+    nombre_card: "Angel Haro Lepe",
+    instagram_card: "https://www.instagram.com/angelito_hl?igsh=MTQ2bjEyM3pkeXBpMg==",
+  },
+  {
+    pixel_url: "/img/Miembros/Tania.webp",
+    rol_card: "Project Manager de TecnoConecta",
+    nombre_card: "Tania Betzabe Topete Santelises",
+    instagram_card: "https://www.instagram.com/tania.santelises?igsh=MWpvNXJvOWNxbTFseg%3D%3D&utm_source=qr",
+  },
+  {
+    pixel_url: "/img/Miembros/Omar.webp",
+    rol_card: "Coordinador de Talleres de TecnoConecta",
+    nombre_card: "Jesus Omar Lopez Gonzalez",
+    instagram_card: "https://www.instagram.com/jesus_omar_1?utm_source=qr",
+  },
+  {
+    pixel_url: "/img/Miembros/Jonathan.webp",
+    rol_card: "Programador de TecnoConecta",
+    nombre_card: "Jonathan de Anda Garcia",
+    instagram_card: "https://www.instagram.com/jonathan.de.anda.garcia?igsh=N3NrZG01bnN4YXkx"
+  },
+];
+---
+
+<section
+  id="Roles" class="flex flex-col items-center justify-center"
+>
+  <h2
+    class="mt-4 text-[3.5rem] text-center font-bold leading-[4rem] tracking-tight text-white"
+    data-aos="fade-up"
+  >
+    <span class="bg-clip-text text-[#006068]">Roles</span>
+  </h2>
+
+  <div class="flex flex-wrap items-center justify-center gap-4 p-4 mt-4 max-sm:gap-2">
+    {
+      Miembros.map(({ pixel_url, rol_card, nombre_card, instagram_card }) => (
+        <Card_Rol
+          pixel_img={pixel_url}
+          rol={rol_card}
+          nombre_miembro={nombre_card}
+          instagram_miembro={instagram_card}
+        />
+      ))
+    }
+  </div>
+</section>
