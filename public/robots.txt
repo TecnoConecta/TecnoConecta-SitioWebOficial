@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://tecnoconecta.net/sitemap-index.xml
+Sitemap: https://tecno-conecta-sitio-web-oficial.vercel.app/sitemap-index.xml

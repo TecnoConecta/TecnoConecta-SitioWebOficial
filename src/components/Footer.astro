@@ -1,6 +1,4 @@
 ---
-import Logo from "./Imagenes/Logo.astro";
-import Logo_img from "../../public/img/TecnoConecta_Logo_Original.webp";
 
 const navItems = [
   { titulo: "Mision y Vision", url: "#Mision_Vision" },
@@ -15,14 +13,19 @@ const navItems = [
     <div class="justify-center md:flex sm:items-center md:justify-between">
       <a
         title="Logo de TecnoConecta"
-        href="https://tecnoconecta.net"
+        href="https://tecno-conecta-sitio-web-oficial.vercel.app/"
         class="flex items-center justify-center mb-4 space-x-3 sm:mb-0 rtl:space-x-reverse"
       >
-        <Logo
-          mobileImgUrl={Logo_img}
-          desktopImgUrl={Logo_img}
-          alt="Logo de TecnoConecta"
+      <picture>
+        <img
+          title="Logo Original - TecnoConecta"
+          class="h-[45px] w-auto"
+          src="/img/TecnoConecta_Logo_Original.webp"
+          alt="Logo Original - TecnoConecta"
+          aria-label="Logo Original - TecnoConecta"
+          loading="lazy"
         />
+      </picture>
       </a>
       <ul
         class="flex flex-wrap items-center justify-center mb-6 text-sm font-medium sm:mb-0"

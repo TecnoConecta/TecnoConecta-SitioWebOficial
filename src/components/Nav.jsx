@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Logo from "./Imagenes/Img.jsx";
 
 const navItems = [
   { titulo: "Mision y Vision", url: "#Mision_Vision" },
@@ -15,24 +14,29 @@ const Navbar = () => {
     setMenuVisible(!menuVisible);
   };
 
-  const mobileImgUrl = "../../public/img/TecnoConecta_Logo_Original.webp";
-  const desktopImgUrl = "../../public/img/TecnoConecta_Logo_Original.webp";
-
   return (
     <>
-      <nav className="fixed top-0 z-20 w-full p-3 backdrop-blur-2xl" data-aos="zoom-in-down">
+      <nav
+        className="fixed top-0 z-20 w-full p-3 backdrop-blur-2xl"
+        data-aos="zoom-in-down"
+      >
         <div className="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto">
           <a
             title="TecnoConecta Logo"
             aria-label="TecnoConecta Logo"
-            href="https://tecnoconecta.net"
+            href="https://tecno-conecta-sitio-web-oficial.vercel.app/"
             className="flex items-center space-x-3 h-14 w-28 rtl:space-x-reverse"
           >
-            <Logo
-              mobileImgUrl={mobileImgUrl}
-              desktopImgUrl={desktopImgUrl}
-              alt="Logo de TecnoConecta"
-            />
+            <picture>
+              <img
+                title="Logo Original - TecnoConecta"
+                className="h-[45px] w-auto"
+                src="/img/TecnoConecta_Logo_Original.webp"
+                alt="Logo Original - TecnoConecta"
+                aria-label="Logo Original - TecnoConecta"
+                loading="lazy"
+              />
+            </picture>
           </a>
           <div className="flex space-x-3 md:order-2 md:space-x-0 rtl:space-x-reverse">
             <a
@@ -92,12 +96,20 @@ const Navbar = () => {
           <div className="fixed inset-0 z-50"></div>
           <div className="fixed inset-y-0 right-0 z-50 w-full px-4 py-6 overflow-y-auto backdrop-blur-2xl sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div className="flex items-center justify-between">
-              <a href="#" className="h-12 w-28 -m-1.5 p-1.5">
-                <Logo
-                  mobileImgUrl={mobileImgUrl}
-                  desktopImgUrl={desktopImgUrl}
-                  alt="Logo de TecnoConecta"
-                />
+              <a
+                href="https://tecno-conecta-sitio-web-oficial.vercel.app/"
+                className="h-12 w-28 -m-1.5 p-1.5"
+              >
+                <picture>
+                  <img
+                    title="Logo Original - TecnoConecta"
+                    className="h-[45px] w-auto"
+                    src="/img/TecnoConecta_Logo_Original.webp"
+                    alt="Logo Original - TecnoConecta"
+                    aria-label="Logo Original - TecnoConecta"
+                    loading="lazy"
+                  />
+                </picture>
               </a>
               <button
                 aria-label="Cerrar el Menu"

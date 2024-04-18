@@ -8,7 +8,7 @@ import vercel from "@astrojs/vercel/serverless";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://tecnoconecta.net",
+  site: "https://tecno-conecta-sitio-web-oficial.vercel.app/",
   integrations: [react({
     include: ["**/react/*"]
   }), tailwind({

@@ -1,9 +1,5 @@
 ---
 
-// Componente de Imagen
-import ResponsiveImg from "../Imagenes/Responsive_Img.astro";
-import ImgUI from "/public/img/UI.webp";
-
 // Botones
 import Btn_Unirse_Comunidad from "../Botones/Btn_Unirse_Comunidad.astro";
 import Btn_Instagram_TecnoConecta from "../Botones/Btn_Instagram_TecnoConecta.astro";
@@ -54,11 +50,15 @@ import Btn_Instagram_TecnoConecta from "../Botones/Btn_Instagram_TecnoConecta.as
     class="mx-2 max-w-[100svh] p-4 mt-2 lg:mt-0 hidden xl:flex"
     data-aos="fade-up-left"
   >
-    <ResponsiveImg
-      mobileImgUrl={ImgUI}
-      desktopImgUrl={ImgUI}
-      alt="Imagenes UI - TecnoConecta"
-      arial-label="Imagenes UI - TecnoConecta"
-    />
+    <picture>
+      <img
+        title="Imagen UI - TecnoConecta"
+        class="h-[450px] w-[450px]"
+        src="/img/UI.webp"
+        alt="Imagen UI - TecnoConecta"
+        aria-label="Imagen UI - TecnoConecta"
+        loading="lazy"
+      />
+    </picture>
   </div>
 </section>
