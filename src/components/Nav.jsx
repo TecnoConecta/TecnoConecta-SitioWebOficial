@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 const navItems = [
+  { titulo: "Historia", url: "#Historia" },
   { titulo: "Misión y Visión", url: "#Mision_Vision" },
   { titulo: "Roles", url: "#Roles" },
   { titulo: "Nuestros Servicios", url: "#Servicios" },
